@@ -1,0 +1,35 @@
+name: Deploy Storybook to Amazon S3
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - development
+
+jobs:
+  deploy:
+    name: Deploy Storybook to Amazon S3
+    environment: Storybook
+    runs-on: self-hosted
+    env:
+      ACCESS_KEY_ID: ${{ vars.ACCESS_KEY_ID }}
+      SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install AWS CLI
+        run: npm install -g aws-cli
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Empty S3 Bucket
+        run: aws s3 rm s3://ams-storybook --recursive
+
+      - name: Copy to S3 using AWS CLI
+        run: aws s3 cp --recursive storybook-static s3://ams-storybook
