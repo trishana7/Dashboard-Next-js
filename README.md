@@ -33,3 +33,13 @@ To run the project, follow these steps:
    ```
 
 This command will compile the project and start the development server. You should see the application running on your local machine.
+
+<img width="1439" alt="Screenshot 2024-06-19 at 7 41 40 PM" src="https://github.com/trishana7/Dashboard-Next-js/assets/56482464/390492ec-56e1-4252-b093-2b2711b83911">
+
+<img width="928" alt="Screenshot 2024-06-19 at 7 41 59 PM" src="https://github.com/trishana7/Dashboard-Next-js/assets/56482464/ed5b2ddb-c062-4f79-8630-1879e816838c">
+
+<img width="1022" alt="Screenshot 2024-06-19 at 7 42 08 PM" src="https://github.com/trishana7/Dashboard-Next-js/assets/56482464/4c62996b-770e-4bcd-b6dd-416959c19b63">
+
+
+
+
